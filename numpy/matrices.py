@@ -13,4 +13,9 @@ x = np.array([[1], [0], [0]])
 print("the first matrix is: ", A)
 print("the second matrix is: ", x)
 product = A.dot(x)
+
+#Num-arrays suppoers element wise multiplication
+#It does not support row-column multiplication
 print("The product of the matrices is:", product)
+newSymforMul = A@x
+print("New symbol product is: ", newSymforMul)
