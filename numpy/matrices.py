@@ -19,3 +19,4 @@ product = A.dot(x)
 print("The product of the matrices is:", product)
 newSymforMul = A@x
 print("New symbol product is: ", newSymforMul)
+
