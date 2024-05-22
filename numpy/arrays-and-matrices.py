@@ -6,6 +6,7 @@
 # operations are views into the array without implicit copying.
 # In numpy, slicing creates views, no copying, and advacned indexing ceates copies.
 
+from numpy.lib.stride_tricks import as_strided
 import numpy as np
 
 x = np.ones((3, 3))
@@ -43,3 +44,14 @@ x[0] = 999
 print("the first array had been updated to: ", x)
 print("note that the second array is uaffected: ", y)
 print("but z has been affected, since it was a view: ", z)
+
+# using numpy to create overlapping blocks that do
+# not consume additional memory
+x = np.arange(16, dtype=np.int64)
+y = as_strided(x, (7, 4), (16, 8))
+print("array after overlapped entries is: ", y)
+# The above code created a range of integers and then
+# overlaps the entries to create a numpy array.
+# as_strided creates a view into the array given the
+# exact strides and shape. This means it manipulates
+# the internal data structure of ndarray
