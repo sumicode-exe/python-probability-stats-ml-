@@ -26,3 +26,6 @@ print("y - 0th row:", y[0, :])
 print("y - 1st row:", y[0, :])
 
 #array slicing to select elements
+print("all rows, 1st through last column:", y[:, 1:])
+print("all rows, every other column:", y[:, ::2])
+print("reverse order of the columns", y[:, ::-1])
