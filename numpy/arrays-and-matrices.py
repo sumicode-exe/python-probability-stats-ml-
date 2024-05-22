@@ -65,3 +65,5 @@ x = np.arange(n)
 k = 5
 y = as_strided(x, (k, n-k+1), (x.itemsize, ) * 2)
 print("after explicit dimension manippulation is:", y)
+
+
