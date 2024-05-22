@@ -15,7 +15,6 @@ from math import sin
 sineMath = [sin(i) for i in [1, 2, 3]]
 print("THe sine of the values in the array is:", sineMath)
 
-
 #NUMPY USES COMMON SENSE CASTING RULES TO RESOLVE THE OUTPUT TYPES. 
 
 #array dimension, row and column detemination
