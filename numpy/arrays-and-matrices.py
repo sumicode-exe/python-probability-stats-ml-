@@ -28,3 +28,19 @@ y = x[:2, :2]
 x[0, 0] = 999
 print("first array is: ", x)
 print("second array is: ", y)
+
+#another way to copy without indexing manipulations
+x = np.arange(5)
+#creates an array
+print("the first array now is: ", x)
+y = x[[0, 1, 2]]
+print("the second array now is: ", y)
+#slice creates view
+#note that y and z have the same entries
+z = x[:3]
+print("the sliced array (array z) is", z)
+x[0] = 999
+print("the first array had been updated to: ", x)
+print("note that the second array is uaffected: ", y)
+print("but z has been affected, since it was a view: ", z)
+
