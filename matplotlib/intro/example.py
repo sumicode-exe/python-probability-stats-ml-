@@ -84,7 +84,7 @@ def main():
     """Make some example plots.
     """
     # Uncomment to see plots as they're produced.
-    # plt.ion()
+    plt.ion()
     output_dir = "./"
 
     # Simple timeseries.
