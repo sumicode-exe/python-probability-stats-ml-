@@ -11,6 +11,7 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def plot_time_series(time, xdata, xlbl, ylbl, ttl):
     """Plot a simple time series.
     """
@@ -34,6 +35,7 @@ def plot_time_series(time, xdata, xlbl, ylbl, ttl):
 
     return f, ax, p
 
+
 def label_bars(ax, rects):
     """Plot numbers on top of bars in bar plot.
     Taken from http://matplotlib.org/examples/api/barchart_demo.html"""
@@ -43,6 +45,7 @@ def label_bars(ax, rects):
         ax.text(rect.get_x() + rect.get_width()/2., height + 0.1,
                 '%d' % int(height),
                 ha='center', va='bottom')
+
 
 def plot_bar_chart(data, lbls, xlbl, ylbl, ttl):
     """Plot a bar chart.
@@ -75,6 +78,7 @@ def plot_bar_chart(data, lbls, xlbl, ylbl, ttl):
     label_bars(ax, b)
 
     return f, ax, b
+
 
 def main():
     """Make some example plots.
