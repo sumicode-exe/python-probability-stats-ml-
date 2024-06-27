@@ -1,11 +1,3 @@
-# in Matlab, we can extend a matrix by simply tacking on another dimension,
-# This works on Matlab because it's arrays uses pass-by-value semantics.
-# So the slice operation actually copies parts of the array ad needed.
-
-# By contrast, numpy uses pass-by-reference semantics so that slice
-# operations are views into the array without implicit copying.
-# In numpy, slicing creates views, no copying, and advacned indexing ceates copies.
-
 from numpy.lib.stride_tricks import as_strided
 import numpy as np
 
